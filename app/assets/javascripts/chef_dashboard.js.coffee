@@ -2,11 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
-   $('#roles').dataTable
+  $('roles').hide
+  $('#roles').dataTable
     bFilter: true
     sDom: "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>"
     sPaginationType: "bootstrap"
     iDisplayLength: 5
     aLengthMenu: [5, 10, 50]
+    sAjaxSource: $('#roles').data('source')
+
+
 
 
