@@ -1,0 +1,19 @@
+    <table id="roles" class="display table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Node</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @roles_list.each do |role, nodes_list| %>
+        <% nodes_list.each do |node| %>
+          <tr>
+            <td><%= role %></td>
+            <td><%= node %></td>
+          </tr>
+        <% end %>
+      <% end %>
+      </tbody>
+    </table>
+
