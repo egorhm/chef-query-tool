@@ -3,9 +3,10 @@ require 'chef/rest'
 module ChefHelper
   class << self
     def fetch_topology
-      chef_server_url = "https://api.opscode.com/organizations/demo_org"
-      client_name = "demo_org-validator"
-      file_name = File.join(Rails.root, 'chef_config','demo_org-validator.pem')
+      chef_server_url = CHEF_CONFIG['server_url']
+      client_name = CHEF_CONFIG['client_name']
+      file_name = File.join(Rails.root, 'chef_config', CHEF_CONFIG['client_key_file_name'])
+
 
       rest = Chef::REST.new(chef_server_url, client_name, file_name)
       roles = rest.get_rest("/roles/")
