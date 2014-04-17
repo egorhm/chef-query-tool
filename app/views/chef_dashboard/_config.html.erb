@@ -1,0 +1,11 @@
+<div class="container" style="margin-top: 10px">
+  <div class="hero-unit">
+  <h3>Configuration options</h3>
+  <p><strong>Server URL :</strong> <%= CHEF_CONFIG['server_url'] %></p>
+  <p><strong>Client Name  :</strong> <%= CHEF_CONFIG['client_name'] %></p>
+  <p><strong>Key FileName :</strong> <%= CHEF_CONFIG['client_key_file_name'] %></p>
+  <%= button_to "Refresh page", {:controller => :chef_dashboard}, {:method => :get, :class => 'btn btn-primary btn-large'}  %>
+  </div>
+</div>
+
+

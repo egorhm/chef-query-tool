@@ -1,0 +1,10 @@
+production: &production
+  server_url: "https://api.opscode.com/organizations/demo_org"
+  client_name: "demo_org-validator"
+  client_key_file_name: "demo_org-validator.pem"
+
+development:
+  <<: *production
+
+test:
+  <<: *production
