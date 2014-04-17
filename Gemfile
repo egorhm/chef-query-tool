@@ -17,7 +17,9 @@ gem 'compass-rails'
 gem 'compass-colors'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
-
+gem 'simple_form'
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+gem 'chef'
 
 group :development do
   gem 'pry'
